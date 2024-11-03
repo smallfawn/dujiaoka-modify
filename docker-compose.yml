@@ -2,21 +2,23 @@ version: "3"
 
 services:
   web:
-    image: stilleshan/dujiaoka
+    image: registry.cn-hangzhou.aliyuncs.com/smallfawn/dujiaoka-modify
     environment:
         # - INSTALL=false
-        - INSTALL=true
+         - INSTALL=true
         # - MODIFY=true
     volumes:
       - ./env.conf:/dujiaoka/.env
       - ./uploads:/dujiaoka/public/uploads
       - ./storage:/dujiaoka/storage
+      - ./theme/hyper:/dujiaoka/resources/views/hyper
+      - ./theme/lang/zh_CN/hyper.php:/dujiaoka/resources/lang/zh_CN/hyper.php
     ports:
       - 56789:80
     restart: always
  
   db:
-    image: mariadb:focal
+    image: registry.cn-hangzhou.aliyuncs.com/smallfawn/mariadb:focal
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
@@ -27,7 +29,7 @@ services:
       - ./mysql:/var/lib/mysql
 
   redis:
-    image: redis:alpine
+    image: registry.cn-hangzhou.aliyuncs.com/smallfawn/redis:alpine
     restart: always
     volumes:
       - ./redis:/data
