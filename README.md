@@ -1,129 +1,101 @@
-<p align="center"><img src="https://i.loli.net/2020/04/07/nAzjDJlX7oc5qEw.png" width="400"></p>
-
-<p align="center">
-<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue" alt="license MIT"></a>
-<a href="https://github.com/assimon/dujiaoka/releases/tag/2.0.4"><img src="https://img.shields.io/badge/version-2.0.4-red" alt="version 2.0.4"></a>
-<a href="https://www.php.net/releases/7_4_0.php"><img src="https://img.shields.io/badge/PHP-7.4-lightgrey" alt="php74"></a>
-<a href="https://shang.qq.com/wpa/qunwpa?idkey=37b6b06f7c941dae20dcd5784088905d6461064d7f33478692f0c4215546cee0"><img src="https://img.shields.io/badge/QQ%E7%BE%A4-568679748-green" alt="QQ群：568679748"></a>
-</p>
-
-## 独角数卡
-
-开源式站长自动化售货解决方案、高效、稳定、快速！
-
-- 框架来自：[laravel/framework](https://github.com/laravel/laravel).
-- 后台管理系统：[laravel-admin](https://laravel-admin.org/).
-- 前端ui [bootstrap](https://getbootstrap.com/).
-
-核心贡献者：
-- [iLay1678](https://github.com/iLay1678)
-
-模板贡献者：
-- [Julyssn](https://github.com/Julyssn) 模板`luna`作者
-- [bimoe](https://github.com/bimoe) 模板`hyper`作者
-
-鸣谢以上开源项目及贡献者，排名不分先后.
-
-## 系统优势
-
-采用业界流行的`laravel`框架，安全及稳定性提升。    
-支持`自定义前端模板`功能   
-支持`国际化多语言包`（需自行翻译）  
-代码全部开源，所有扩展包采用composer加载，代码所有内容可溯源！     
-长期技术更新支持！
-
-## 写在前面
-本程序有一定的上手难度（对于小白而言），需要您对linux服务器有基本的认识和操作度   
-且本程序不支持虚拟主机，大概率也不支持windows服务器！  
-如果您连宝塔、phpstudy、AppNode等一键可视化服务器面板也未曾使用或听说过，那么我大概率劝您放弃本程序！  
-如果您觉得部署有难度，建议仔细阅读（仔细！）宝塔视频安装篇教程，里面有保姆级的安装流程和视频教程！   
-认真观看部署教程我可以保证您98%可能性能部署成功！  
-勤动手，多思考，善研究！
-
-## 使用交流      
-Telegram: [https://t.me/dujiaoka](https://t.me/dujiaoka)    
-关注Telegram官方频道：[https://t.me/dujiaoshuka](https://t.me/dujiaoshuka) (系统更新通知，bug更新，重大事件推送)
-
-## 🔥推荐服务器 
-- （美国免备案vps，配置2核2G仅需`20.98$`≈`145RMB`一年/支持支付宝付款）[👉🏻点我直达](https://my.racknerd.com/aff.php?aff=2745&pid=681)
-- （美国到中国大陆最快的vps， CN2GIA优化网络）[👉🏻点我直达](https://bandwagonhost.com/aff.php?aff=58526&productFilter=1)
-
-## 界面尝鲜
-【官方unicorn模板】
-![首页.png](https://i.loli.net/2021/09/14/NZIl6s9RXbHwkmA.png)
-
-【luna模板】 
-![首页.png](https://i.loli.net/2020/10/24/ElKwJFsQy4a9fZi.png)
-
-【hyper模板】  
-![首页.png](https://i.loli.net/2021/01/06/nHCSV5PdJIzT6Gy.png)
-
-## 安装篇
-- [Linux环境安装](https://github.com/assimon/dujiaoka/wiki/linux_install)
-- [Docker安装](https://github.com/assimon/dujiaoka/wiki/docker_install)
-- [2.x版本宝塔安装教程](https://github.com/assimon/dujiaoka/wiki/2.x_bt_install)
-- [1.x版本宝塔环境安装](https://github.com/assimon/dujiaoka/wiki/1.x_bt_install)
-- [常见问题锦集-你遇到的问题大部分能在这里找到解决！！](https://github.com/assimon/dujiaoka/wiki/problems)
-- [系统升级](https://github.com/assimon/dujiaoka/wiki/update)
-- [各支付对应后台配置](https://github.com/assimon/dujiaoka/wiki/problems#各支付对应配置)
-- [视频教程及工具集合](https://pan.dujiaoka.com)
-
-## 支付接口已集成
-- [x] 支付宝当面付
-- [x] 支付宝PC支付
-- [x] 支付宝手机支付
-- [x] [payjs微信扫码](http://payjs.cn).
-- [x] [Paysapi(支付宝/微信)](https://www.paysapi.com/).
-- [x] 码支付(QQ/支付宝/微信)
-- [x] 微信企业扫码支付
-- [x] [Paypal支付(默认美元)](https://www.paypal.com)
-- [x] V免签支付
-- [x] 全网易支付支持(通用彩虹版)
-- [x] [stripe](https://stripe.com/)
-
-## 基本环境要求
-
-- (PHP + PHPCLI) version = 7.4
-- Nginx version >= 1.16
-- MYSQL version >= 5.6
-- Redis (高性能缓存服务)
-- Supervisor (一个python编写的进程管理服务)
-- Composer (PHP包管理器)
-- Linux (Win下未测试，建议直接Linux)
-
-## PHP环境要求
-
-星号(*)为必须执行的要求，其他为建议内容
-
-- **\*安装`fileinfo`扩展**
-- **\*安装`redis`扩展**
-- **\*终端需支持`php-cli`，测试`php -v`(版本必须一致)**
-- **\*需要开启的函数：`putenv`，`proc_open`，`pcntl_signal`，`pcntl_alarm`**
-- 安装`opcache`扩展
-
-## 默认后台
-
-- 后台路径 `/admin`
-- 默认管理员账号 `admin`
-- 默认管理员密码 `admin`
-
-## 免责声明
-
-独角数卡程序是免费开源的产品，仅用于学习交流使用！       
-不可用于任何违反`中华人民共和国(含台湾省)`或`使用者所在地区`法律法规的用途。      
-因为作者即本人仅完成代码的开发和开源活动`(开源即任何人都可以下载使用)`，从未参与用户的任何运营和盈利活动。    
-且不知晓用户后续将`程序源代码`用于何种用途，故用户使用过程中所带来的任何法律责任即由用户自己承担。      
+# dujiaoka
+GitHub [stilleshan/dockerfiles](https://github.com/stilleshan/dockerfiles)  
+Docker [stilleshan/dujiaoka](https://hub.docker.com/r/stilleshan/dujiaoka)
+> *docker image support for X86 and ARM*
 
 
-## Thanks
+## 简介
+基于 🦄独角数卡 [assimon/dujiaoka](https://github.com/assimon/dujiaoka) 的 docker 镜像，支持 docker-compose 数据持久化部署。
 
-Thanks JetBrains for the free open source license
-
-<a href="https://www.jetbrains.com/?from=gev" target="_blank">
-	<img src="https://i.loli.net/2021/02/08/2aejB8rwNmQR7FG.png" width = "260" align=center />
-</a>
+> *本项目基于现有的 [Apocalypsor/dujiaoka-docker](https://github.com/Apocalypsor/dujiaoka-docker) 项目重新制作支持 ARM64 架构镜像，你也可以参考下文作者博客链接部署。*
 
 
-## License
+## 更新
+- **2023-01-19** 更新`2.0.6`版 docker 镜像,同时支持 X86 和 ARM 架构.
+- **2022-08-24** 更新`2.0.5`版 docker 镜像,同时支持 X86 和 ARM 架构.
+- **2022-07-19** 更新`2.0.4`版 docker 镜像,同时支持 X86 和 ARM 架构.
+- **2022-07-19** 更新`2.0.3`版 docker 镜像,同时支持 X86 和 ARM 架构.
 
-独角数卡 DJK Inc [MIT license](https://opensource.org/licenses/MIT).
+
+## 示例
+https://shop.ioiox.xyz
+
+
+## 部署
+更详细的图文教程请访问我的博客：  
+[docker 部署 dujiaoka 独角数卡自动售货系统 支持 X86 和 ARM 架构](https://www.ioiox.com/archives/159.html)
+
+### 准备配置文件
+```shell
+mkdir dujiaoka && cd dujiaoka
+# 创建主目录
+mkdir storage uploads
+chmod -R 777 storage uploads
+# 创建数据目录用于挂载
+```
+
+下载本项目中的`env.conf`和`docker-compose.yml`到上述的`dujiaoka`目录中。
+
+```shell
+chmod -R 777 env.conf
+# 重要步骤
+```
+
+### 配置 nginx
+参考`domian.conf`修改`域名`和`证书路径`，最重要的是`location ^~ /`中的相关配置。
+```nginx
+    location ^~ / {
+        proxy_pass http://127.0.0.1:56789;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header REMOTE-HOST $remote_addr;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+
+        add_header X-Cache $upstream_cache_status;
+
+        proxy_set_header Accept-Encoding "";
+        sub_filter "http://" "https://";
+        sub_filter_once off;
+    }
+```
+
+### 启动容器
+确保目录中有`docker-compose.yml`,`env.conf`,`storage`和`uploads`后执行以下命令`首次`启动：
+> *注意修改 docker-compose.yml 中的 mysql 密码*
+```shell
+docker-compose up -d
+```
+首次启动后，会自动生成`mysql`和`redis`的数据目录。
+
+### 网页安装
+访问域名开始安装：
+- 将`mysql`的地址改为`db`
+- 将`mysql`的用户名改为`dujiaoka`
+- 将`redis`的地址改为`redis`
+- 填写网站名称
+- 网站 url 填写完整域名地址，例如`https://shop.ioiox.com`
+
+点击安装，并成功安装，先修改其他参数后在进行登录使用。
+```shell
+docker-compose down
+# 停止服务
+```
+将`docker-compose.yml`中的`INSTALL`改为`false`  
+将`env.conf`中的`APP_DEBUG`改为`false`
+此时可以看到`env.conf`中的相关配置已经自动变为安装时填写的参数。
+```shell
+docker-compose up -d
+# 再次启动开始使用
+```
+
+### 完成部署
+自此已完成安装部署，访问域名开始使用： 
+- 所有配置，数据，缓存，数据库都存储在整个`dujiaoka`目录中，定期备份即可。
+- 如需迁移服务器，仅需打包本目录到新服务器，执行上述所有`chmod 777`的权限命令，再次`docker-compose up -d`即可恢复上线。
+
+
+## 链接
+- [Apocalypsor/dujiaoka-docker](https://github.com/Apocalypsor/dujiaoka-docker)
+- [如何优雅地搭建自己的发卡站](https://blog.dov.moe/posts/49102/)
+- [docker 部署 dujiaoka 独角数卡自动售货系统 支持 X86 和 ARM 架构](https://www.ioiox.com/archives/159.html)

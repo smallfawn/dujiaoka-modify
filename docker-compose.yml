@@ -1,20 +1,33 @@
-version: "2.2"
+version: "3"
+
 services:
   web:
-    build: .
-    container_name: dujiaoka
-    ports:
-      - "80:80"
-      - "9000:9000"
-    volumes:
-      # 增加此行，则将环境信息进行复制到容器，请确保你存在该文件
-      - ${DATA_DIR}/dujiaoka/.env:/app/.env
-      # 增加此行，避免每次重新创建容器都需要初始化
-      - ${DATA_DIR}/dujiaoka/install.lock:/app/install.lock
-      # 增加此行，确保将上传的资源映射出来，避免容器重新创建后图片不在了
-      - ${DATA_DIR}/dujiaoka/public/uploads:/app/public/uploads
+    image: stilleshan/dujiaoka
     environment:
-      WEB_DOCUMENT_ROOT: "/app/public"
-      TZ: Asia/Shanghai
-    tty: true
+        # - INSTALL=false
+        - INSTALL=true
+        # - MODIFY=true
+    volumes:
+      - ./env.conf:/dujiaoka/.env
+      - ./uploads:/dujiaoka/public/uploads
+      - ./storage:/dujiaoka/storage
+    ports:
+      - 56789:80
     restart: always
+ 
+  db:
+    image: mariadb:focal
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+      - MYSQL_DATABASE=dujiaoka
+      - MYSQL_USER=dujiaoka
+      - MYSQL_PASSWORD=YOUR_PASSWORD
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    restart: always
+    volumes:
+      - ./redis:/data
