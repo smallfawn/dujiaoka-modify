@@ -70,7 +70,7 @@ class HomeController extends BaseController
                     'message' => '商品不存在',
                     'redirectUrl' => url('/'),
                     'delay' => 2000, // 3秒后跳转
-                ], Response::HTTP_NOT_FOUND);
+                ]);
             }
             $this->goodsService->validatorGoodsStatus($goods);
             // 有没有优惠码可以展示
