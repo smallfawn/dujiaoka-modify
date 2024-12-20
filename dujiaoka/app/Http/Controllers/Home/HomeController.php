@@ -64,13 +64,12 @@ class HomeController extends BaseController
     {
         try {
             $goods = $this->goodsService->detail($id);
-            // 检查商品是否存在
             if (!$goods) {
-            // 商品不存在，返回包含JavaScript跳转的HTML响应
+                // 商品不存在，返回JSON响应
                 return response()->json([
                     'message' => '商品不存在',
                     'redirectUrl' => url('/'),
-                    'delay' => 3000, // 3秒后跳转
+                    'delay' => 2000, // 3秒后跳转
                 ], Response::HTTP_NOT_FOUND);
             }
             $this->goodsService->validatorGoodsStatus($goods);

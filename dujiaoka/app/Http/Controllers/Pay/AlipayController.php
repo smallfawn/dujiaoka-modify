@@ -57,13 +57,6 @@ class AlipayController extends PayController
                     } catch (\Exception $e) {
                         return $this->err(__('dujiaoka.prompt.abnormal_payment_channel') . $e->getMessage());
                     }
-                case 'aliwap':
-                    try{
-                        $result = Pay::alipay($config)->wap($order);
-                        return $result;
-                    } catch (\Exception $e) {
-                        return $this->err(__('dujiaoka.prompt.abnormal_payment_channel') . $e->getMessage());
-                    }
             }
         } catch (RuleValidationException $exception) {
             return $this->err($exception->getMessage());

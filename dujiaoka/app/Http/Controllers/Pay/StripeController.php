@@ -520,16 +520,15 @@ class StripeController extends PayController
     public function getUsdCurrency($cny)
     {
         $client = new Client();
-        $res = $client->get('https://m.cmbchina.com/api/rate/fx-rate');
+        $res = $client->get('https://m.cmbchina.com/api/rate/getfxrate');
         $fxrate = json_decode($res->getBody(), true);
-        $data = $fxrate['body']['data'];
-        if (!isset($data)) {
+        if (!isset($fxrate['data'])) {
             throw new \Exception('汇率接口异常');
         }
         $dfFxrate = 0.13;
-        foreach ($data as $item) {
-            if ($item['ccyNbr'] == "美元") {
-                $dfFxrate = bcdiv(100, $item['rtcOfr'], 2);
+        foreach ($fxrate['data'] as $item) {
+            if ($item['ZCcyNbr'] == "美元") {
+                $dfFxrate = bcdiv(100, $item['ZRtcOfr'], 2);
                 break;
             }
         }

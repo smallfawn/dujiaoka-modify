@@ -13,7 +13,6 @@
     let paySvgArr = {
         zfbf2f     : alipaySvg,
         aliweb     : alipaySvg,
-        aliwap     : alipaySvg,
         mqq        : qqSvg,
         mzfb       : alipaySvg,
         mwx        : weChatSvg,
@@ -26,7 +25,7 @@
         qqpay      : qqSvg,
         paypal     : paypal,
         mgcoin     : otherSvg,
-        coinbase   : coinbaseSvg,
+        coinbase   : coinbaseSvg,		
         vzfb       : alipaySvg,
         vwx        : weChatSvg,
     };

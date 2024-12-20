@@ -89,7 +89,7 @@
                     @foreach($other_ipu as $ipu)
                         <div class="form-group">
                             <div class="buy-title">{{ $ipu['desc'] }}</div>
-                            <input type="text" name="{{ $ipu['field'] }}" @if($ipu['rule'] !== false) required @endif class="form-control" placeholder="{{ $ipu['placeholder'] }}">
+                            <input type="text" name="{{ $ipu['field'] }}" @if($ipu['rule'] !== false) required @endif class="form-control" placeholder="{{ $ipu['desc'] }}">
                         </div>
                     @endforeach
                 @endif
