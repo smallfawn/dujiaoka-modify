@@ -66,10 +66,10 @@ class HomeController extends BaseController
             $goods = $this->goodsService->detail($id);
             if (!$goods) {
                 // 商品不存在，返回JSON响应
-                return response()->json([
+                return view('home.error', [
                     'message' => '商品不存在',
                     'redirectUrl' => url('/'),
-                    'delay' => 2000, // 3秒后跳转
+                    'delay' => 2000, // 2秒后跳转
                 ]);
             }
             $this->goodsService->validatorGoodsStatus($goods);
