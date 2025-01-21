@@ -64,14 +64,6 @@ class HomeController extends BaseController
     {
         try {
             $goods = $this->goodsService->detail($id);
-            if (!$goods) {
-                // 商品不存在，返回JSON响应
-                return view('home.error', [
-                    'message' => '商品不存在,将在2s后跳转到首页',
-                    'redirectUrl' => url('/'),
-                    'delay' => 2000, // 2秒后跳转
-                ]);
-            }
             $this->goodsService->validatorGoodsStatus($goods);
             // 有没有优惠码可以展示
             if (count($goods->coupon)) {
