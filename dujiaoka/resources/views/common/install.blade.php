@@ -766,7 +766,7 @@ TkSuQmCC" />
             </div>
         </form>
 
-        <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script>
             $(function () {
                 $('form:input:first').select();
